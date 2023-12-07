@@ -13,7 +13,7 @@ public class BoardServiceImpl implements BoardService {
     public List<ListDto> boardlist() {
 
 
-        List<ListDto> listDtoMember = new ArrayList<ListDto>();
+        List<ListDto> listDtoMember = new ArrayList<>();
 
         String[] title = {
                 "개발자의 삶",
