@@ -1,6 +1,7 @@
 package com.okestro.community.model;
 
 import lombok.Data;
+import lombok.Setter;
 
 @Data
 public class ListDto {
