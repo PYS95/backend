@@ -1,8 +1,10 @@
 package com.okestro.community.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class ListDto {
 
     private int id;
@@ -11,7 +13,7 @@ public class ListDto {
     private String content;
     //private int commentCount;
     private  String commentCount;
-//    private String[] comment;
+//    private String[] comment; // 추후 구현
 
     public void setId(int id) {
         this.id = id;
@@ -38,5 +40,5 @@ public class ListDto {
 
 //    public void setComment(String[] comment) {
 //        this.comment = comment;
-//    }
+//    } // 추후 구현
 }
