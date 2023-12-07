@@ -11,7 +11,7 @@ public class ListDto {
     private String content;
     //private int commentCount;
     private  String commentCount;
-    private String[] comment;
+//    private String[] comment;
 
     public void setId(int id) {
         this.id = id;
@@ -36,7 +36,7 @@ public class ListDto {
         this.commentCount = commentCount;
     }
 
-    public void setComment(String[] comment) {
-        this.comment = comment;
-    }
+//    public void setComment(String[] comment) {
+//        this.comment = comment;
+//    }
 }
