@@ -1,8 +1,8 @@
 package com.okestro.community.model;
 
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
+@Data
 public class ListDto {
 
     private int id;
