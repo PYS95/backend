@@ -15,11 +15,8 @@ public class BoardController {
     @Autowired
     private BoardService testService;
 
-    @GetMapping("/getMemberList")
-    public List<ListDto> leftA() {
-
+    @GetMapping("/getBoardList")
+    public List<ListDto> boardList() {
         return  testService.boardlist();
-
-
     }
 }
