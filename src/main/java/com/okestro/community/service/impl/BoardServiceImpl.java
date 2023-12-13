@@ -10,8 +10,7 @@ import java.util.List;
 @Service
 public class BoardServiceImpl implements BoardService {
 
-    private List<ListDto> listDtoMember = new ArrayList<>();
-
+    private final List<ListDto> listDtoMember = new ArrayList<>();
 
     @Override
     public List<ListDto> boardlist() {

@@ -10,6 +10,4 @@ public interface BoardService {
 
     ListDto getBoardById(Long id);
 
-    void addComment(Long listId, String comment);
-
 }
