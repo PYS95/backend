@@ -101,18 +101,6 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public void addComment(Long listId, String comment) {
-        // 해당 listId에 해당하는 ListDto를 찾아서 댓글을 추가
-        for (ListDto listDto : listDtoMember) {
-            if (listDto.getId().equals(listId)) {
-                listDto.getComments().add(comment);
-                listDto.setCommentCount(listDto.getComments().size());
-                break; // 해당 게시물을 찾았으니 루프 종료
-            }
-        }
-    }
-
-    @Override
     public ListDto getBoardById(Long id) {
         // 해당 id에 해당하는 ListDto를 찾아서 반환
         return listDtoMember.stream()
