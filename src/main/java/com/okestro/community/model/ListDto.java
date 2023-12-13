@@ -3,22 +3,18 @@ package com.okestro.community.model;
 import lombok.Data;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Setter
 @Data
 public class ListDto {
 
-    private int id;
+    private Long id;
     private String title;
     private String name;
     private String content;
-    //    public void setCommentCount(int commentCount) {
-    //        this.commentCount = commentCount;
-    //    }
-    //private int commentCount;
-    private  String commentCount;
-//    private String[] comment; // 추후 구현
+    private List<String> comments = new ArrayList<>();
+    private int commentCount;
 
-    //    public void setComment(String[] comment) {
-//        this.comment = comment;
-//    } // 추후 구현
 }
