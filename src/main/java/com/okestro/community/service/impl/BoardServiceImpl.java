@@ -10,8 +10,6 @@ import java.util.List;
 @Service
 public class BoardServiceImpl implements BoardService {
 
-    private String name = "ys";
-
     private final List<ListDto> listDtoMember = new ArrayList<>();
 
     @Override
