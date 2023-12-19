@@ -9,11 +9,13 @@ import java.util.List;
 
 @Service
 public class BoardServiceImpl implements BoardService {
+
+    private final List<ListDto> listDtoMember = new ArrayList<>();
+
     @Override
     public List<ListDto> boardlist() {
 
-
-        List<ListDto> listDtoMember = new ArrayList<>();
+        listDtoMember.clear();
 
         String[] title = {
                 "개발자의 삶",
@@ -84,17 +86,26 @@ public class BoardServiceImpl implements BoardService {
                 "최근의 테크 트렌드와 관련된 이야기를 나눠봐요. 여러분들은 어떤 기술 동향에 관심이 있나요?"
         };
 
-        for (int i = 0; i <= 19; i++) {
+        for (int i = 0; i < 20; i++) {
             ListDto listDto = new ListDto();
-            listDto.setId(i+1);
+            listDto.setId((long) (i + 1));
             listDto.setTitle(title[i]);
             listDto.setName(name[i]);
             listDto.setContent(content[i]);
             listDto.setCommentCount("0");
-            // 댓글 추가 기능을 구현해야함. 갯수 int, 내용 String[] 구현
+//            listDto.setComments(new ArrayList<>()); // 댓글 리스트 초기화
             listDtoMember.add(listDto);
-
         }
+
         return listDtoMember;
+    }
+
+    @Override
+    public ListDto getBoardById(Long id) {
+        // 해당 id에 해당하는 ListDto를 찾아서 반환
+        return listDtoMember.stream()
+                .filter(dto -> dto.getId().equals(id))
+                .findFirst()
+                .orElse(null);
     }
 }
