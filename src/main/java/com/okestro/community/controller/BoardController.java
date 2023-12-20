@@ -5,11 +5,13 @@ import com.okestro.community.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class BoardController {
 
     private final BoardService boardService;
@@ -20,13 +22,13 @@ public class BoardController {
         this.boardService = boardService;
     }
 
-    @GetMapping("/getBoardList")
+    @GetMapping("/boardList")
     public List<ListDto> boardList() {
         return  boardService.boardlist();
     }
 
-    @GetMapping("/getBoardList/{id}")
-    public ListDto detailList(@PathVariable Long id) {
+    @GetMapping("/boardList/{id}")
+    public ListDto detailList(@PathVariable int id) {
         return boardService.getBoardById(id);
     }
 
