@@ -1,43 +1,26 @@
 package com.okestro.community.model;
-
 import lombok.Data;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
+@NoArgsConstructor
 public class ListDto {
 
     private Long id;
     private String title;
     private String name;
     private String content;
-    //private int commentCount;
-    private  String commentCount;
-//    private String[] comment; // 추후 구현
+    private List<String> comments;
+    private int commentCount;
 
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-//    public void setCommentCount(int commentCount) {
+//    public ListDto(Long id, String title, String name, String content, List<String> comments, int commentCount) {
+//        this.id = id;
+//        this.title = title;
+//        this.name = name;
+//        this.content = content;
+//        this.comments = comments;
 //        this.commentCount = commentCount;
 //    }
-    public void setCommentCount(String commentCount) {
-        this.commentCount = commentCount;
-    }
-
-//    public void setComment(String[] comment) {
-//        this.comment = comment;
-//    } // 추후 구현
 }
