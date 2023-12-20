@@ -12,18 +12,23 @@ import java.util.List;
 @RestController
 public class BoardController {
 
+    private final BoardService boardService;
+
 
     @Autowired
-    private BoardService testService;
+    public BoardController(BoardService boardService){
+        this.boardService = boardService;
+    }
 
     @GetMapping("/getBoardList")
     public List<ListDto> boardList() {
-        return  testService.boardlist();
+        return  boardService.boardlist();
     }
 
     @GetMapping("/getBoardList/{id}")
     public ListDto detailList(@PathVariable Long id) {
-        return testService.getBoardById(id);
+        return boardService.getBoardById(id);
     }
+
 }
 
