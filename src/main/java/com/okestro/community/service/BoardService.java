@@ -8,6 +8,6 @@ public interface BoardService {
 
     List<ListDto> boardlist();
 
-    ListDto getBoardById(int id);
+    ListDto getBoardById(Long id);
 
 }
