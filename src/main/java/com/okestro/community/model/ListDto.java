@@ -8,14 +8,14 @@ import java.util.List;
 @NoArgsConstructor
 public class ListDto {
 
-    private int id;
+    private Long id;
     private String title;
     private String name;
     private String content;
     private List<String> comments;
     private int commentCount;
 
-    public ListDto(int id, String title, String name, String content, List<String> comments, int commentCount) {
+    public ListDto(Long id, String title, String name, String content, List<String> comments, int commentCount) {
         this.id = id;
         this.title = title;
         this.name = name;
