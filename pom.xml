@@ -42,17 +42,14 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.6.12.Final</version>
         </dependency>
-<<<<<<< HEAD
-
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
-=======
+        </dependency>
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>
             <artifactId>mariadb-java-client</artifactId>
             <version>3.0.7</version>
->>>>>>> develop
         </dependency>
     </dependencies>
 
