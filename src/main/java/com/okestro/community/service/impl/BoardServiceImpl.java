@@ -158,11 +158,16 @@ public class BoardServiceImpl implements BoardService {
 
     @Override
     public List<ListDto> boardlist() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
         return listDtoMember;
     }
 
     @Override
     public ListDto getBoardById(Long id) {
+<<<<<<< HEAD
         return listDtoMember.stream()
                 .filter(listDto -> listDto.getId().equals(id))
                 .findFirst()
@@ -179,6 +184,17 @@ public class BoardServiceImpl implements BoardService {
 //            e.printStackTrace();
 //
 //        }
+=======
+        try {
+            return listDtoMember.stream()
+                    .filter(listDto -> Objects.equals(listDto.getId(), id))
+                    .findFirst()
+                    .orElseThrow(() -> new RuntimeException("ListDto not found for id: " + id));
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            return null;
+        }
+>>>>>>> develop
     }
 }
 
