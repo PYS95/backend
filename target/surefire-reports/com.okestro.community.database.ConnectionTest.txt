@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.okestro.community.database.ConnectionTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.116 s <<< FAILURE! -- in com.okestro.community.database.ConnectionTest
+com.okestro.community.database.ConnectionTest.ConnectionTest -- Time elapsed: 0.103 s <<< ERROR!
+java.sql.SQLNonTransientConnectionException: Socket fail to connect to host:address=(host=loaclhost)(port=3306)(type=primary). loaclhost
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:137)
+	at org.mariadb.jdbc.client.impl.StandardClient.<init>(StandardClient.java:99)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:70)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:101)
+	at org.mariadb.jdbc.Driver.connect(Driver.java:27)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.okestro.community.database.ConnectionTest.ConnectionTest(ConnectionTest.java:14)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.net.UnknownHostException: loaclhost
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.mariadb.jdbc.client.impl.ConnectionHelper.connectSocket(ConnectionHelper.java:131)
+	... 10 more
+

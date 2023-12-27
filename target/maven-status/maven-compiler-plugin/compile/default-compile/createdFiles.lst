@@ -1,0 +1,5 @@
+com/okestro/community/CommunityApplication.class
+com/okestro/community/model/ListDto.class
+com/okestro/community/controller/BoardController.class
+com/okestro/community/service/BoardService.class
+com/okestro/community/service/impl/BoardServiceImpl.class
