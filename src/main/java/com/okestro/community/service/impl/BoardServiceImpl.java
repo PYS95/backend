@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class BoardServiceImpl implements BoardService {
@@ -154,24 +155,30 @@ public class BoardServiceImpl implements BoardService {
         this.listDtoMember.add(listDto20);
     }
 
+
     @Override
     public List<ListDto> boardlist() {
-
         return listDtoMember;
     }
 
     @Override
     public ListDto getBoardById(Long id) {
+        return listDtoMember.stream()
+                .filter(listDto -> listDto.getId().equals(id))
+                .findFirst()
+                .orElse(null);
 
-        try {
-            return listDtoMember.stream()
-                    .filter(listDto -> listDto.getId().equals(id))
-                    .findFirst()
-                    .orElseThrow(() -> new RuntimeException("ListDto not found for id: " + id));
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+
+
+//        try {
+//            return listDtoMember.stream()
+//                    .filter(listDto -> Objects.equals(listDto.getId(), id))
+//                    .findFirst()
+//                    .orElseThrow(() -> new RuntimeException("ListDto not found for id: " + id));
+//        } catch (RuntimeException e) {
+//            e.printStackTrace();
+//
+//        }
     }
 }
 
