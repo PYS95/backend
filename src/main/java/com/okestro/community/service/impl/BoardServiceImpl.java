@@ -2,6 +2,7 @@ package com.okestro.community.service.impl;
 
 import com.okestro.community.model.ListDto;
 import com.okestro.community.service.BoardService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
+
 public class BoardServiceImpl implements BoardService {
     private final List<ListDto> listDtoMember = new ArrayList<>();
 

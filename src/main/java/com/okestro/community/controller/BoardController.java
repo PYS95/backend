@@ -34,6 +34,5 @@ public class BoardController {
     public ListDto detailList(@PathVariable Long id) {
         return boardService.getBoardById(id);
     }
-
 }
 
