@@ -1,10 +1,12 @@
+com/okestro/community/controller/UserController.class
+com/okestro/community/repo/UserRepository.class
+com/okestro/community/controller/UserController$UserRequest.class
+com/okestro/community/model/UserEntity.class
+com/okestro/community/model/UserEntity$UserEntityBuilder.class
+com/okestro/community/service/impl/UserServiceImpl.class
 com/okestro/community/controller/BoardController.class
-com/okestro/community/repository/BoardRepository.class
-com/okestro/community/entity/BoardEntity$BoardEntityBuilder.class
 com/okestro/community/service/impl/BoardServiceImpl.class
-com/okestro/community/model/BoardDto$BoardDtoBuilder.class
-com/okestro/community/model/BoardDto.class
 com/okestro/community/CommunityApplication.class
 com/okestro/community/model/ListDto.class
 com/okestro/community/service/BoardService.class
-com/okestro/community/entity/BoardEntity.class
+com/okestro/community/service/UserService.class

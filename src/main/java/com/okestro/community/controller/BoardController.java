@@ -1,7 +1,7 @@
 package com.okestro.community.controller;
 
-import com.okestro.community.entity.BoardEntity;
-import com.okestro.community.model.BoardDto;
+//import com.okestro.community.entity.BoardEntity;
+//import com.okestro.community.model.BoardDto;
 import com.okestro.community.model.ListDto;
 import com.okestro.community.service.BoardService;
 import lombok.RequiredArgsConstructor;

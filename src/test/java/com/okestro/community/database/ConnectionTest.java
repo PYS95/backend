@@ -12,7 +12,7 @@ public class ConnectionTest {
         Class.forName("org.mariadb.jdbc.Driver");
 
         Connection connection = DriverManager.getConnection(
-                "jdbc:mariadb://loaclhost:3306/board",
+                "jdbc:mariadb://localhost:3306/board",
                 "root",
                 "1234"
         );
