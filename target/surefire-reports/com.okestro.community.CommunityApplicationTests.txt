@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.okestro.community.CommunityApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.033 s <<< FAILURE! - in com.okestro.community.CommunityApplicationTests
-contextLoads  Time elapsed: 0.008 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': FactoryBean threw exception on object creation; nested exception is java.lang.IllegalArgumentException: Failed to create query for method public abstract boolean com.okestro.community.repo.UserRepository.existsByUsername(java.lang.String)! No property username found for type UserEntity! Did you mean 'user_name'?
-Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract boolean com.okestro.community.repo.UserRepository.existsByUsername(java.lang.String)! No property username found for type UserEntity! Did you mean 'user_name'?
-Caused by: org.springframework.data.mapping.PropertyReferenceException: No property username found for type UserEntity! Did you mean 'user_name'?
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.725 s - in com.okestro.community.CommunityApplicationTests

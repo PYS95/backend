@@ -1,7 +1,9 @@
 package com.okestro.community.service;
 
-public interface UserService {
+import com.okestro.community.repo.UserRepository;
 
-    boolean isUsernameUnique(String user_name);
-    void registerUser(String user_name, String user_pw);
+public interface UserService {
+    boolean isUsernameUnique(String user_id);
+
+    void registerUser(String user_id, String user_pw);
 }

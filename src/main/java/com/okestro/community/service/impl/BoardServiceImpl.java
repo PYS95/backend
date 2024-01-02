@@ -166,9 +166,9 @@ public class BoardServiceImpl implements BoardService {
     }
 
     @Override
-    public ListDto getBoardById(Long id) {
+    public ListDto getBoardById(Long user_no) {
         return listDtoMember.stream()
-                .filter(listDto -> listDto.getId().equals(id))
+                .filter(listDto -> listDto.getId().equals(user_no))
                 .findFirst()
                 .orElse(null);
 

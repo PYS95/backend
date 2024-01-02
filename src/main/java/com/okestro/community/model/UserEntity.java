@@ -1,9 +1,6 @@
 package com.okestro.community.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -12,19 +9,23 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "board")
+@Table(name = "user")
 public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_id;
 
-    @Column(name = "username", nullable = false, unique = true)
-    private String username;
+    private int user_no;
+
+    @Getter
+    @Column(nullable = false, unique = true)
+    private String user_id;
 
     @Column(nullable = false)
     private String user_pw;
 
-    public UserEntity(String user_pw) {
+    public UserEntity(String user_id, String user_pw) {
+        this.user_id = user_id;
+        this.user_pw = user_pw;
     }
 }
