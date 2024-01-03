@@ -1,7 +1,5 @@
 package com.okestro.community.service;
 
-import com.okestro.community.repo.UserRepository;
-
 public interface UserService {
     boolean isUsernameUnique(String user_id);
 

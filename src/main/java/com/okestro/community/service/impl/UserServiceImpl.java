@@ -17,12 +17,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean isUsernameUnique(String user_id) {
-        return !userRepository.existsById(Long.valueOf(user_id));
+    public boolean isUsernameUnique(String userId) {
+        return userRepository.findByUserId(userId).isPresent();
     }
 
     @Override
     public void registerUser(String user_id, String user_pw) {
-        userRepository.saveAndFlush(new UserEntity(user_id, user_pw));
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUserId(user_id);
+        userEntity.setUserPw(user_pw);
+        userRepository.save(userEntity);
     }
 }

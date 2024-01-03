@@ -3,6 +3,7 @@ package com.okestro.community.model;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Data
 @AllArgsConstructor
@@ -14,18 +15,14 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_no")
+    private Long userNo;
 
-    private int user_no;
+    @NotBlank(message = "아이디를 입력해주세요.")
+    @Column(name = "user_id", nullable = false, unique = true)
+    private String userId;
 
-    @Getter
-    @Column(nullable = false, unique = true)
-    private String user_id;
-
-    @Column(nullable = false)
-    private String user_pw;
-
-    public UserEntity(String user_id, String user_pw) {
-        this.user_id = user_id;
-        this.user_pw = user_pw;
-    }
+    @NotBlank(message = "비밀번호를 입력해주세요.")
+    @Column(name = "user_pw", nullable = false)
+    private String userPw;
 }
