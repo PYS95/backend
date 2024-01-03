@@ -22,10 +22,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void registerUser(String user_id, String user_pw) {
+    public void registerUser(String userId, String userPw) {
         UserEntity userEntity = new UserEntity();
-        userEntity.setUserId(user_id);
-        userEntity.setUserPw(user_pw);
+        userEntity.setUserId(userId);
+        userEntity.setUserPw(userPw);
         userRepository.save(userEntity);
     }
 }

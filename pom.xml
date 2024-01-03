@@ -89,9 +89,6 @@
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                         </exclude>
-                        <properties>
-                            <maven.plugin.validation>VERBOSE</maven.plugin.validation>
-                        </properties>
                     </excludes>
                 </configuration>
             </plugin>

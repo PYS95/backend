@@ -6,6 +6,5 @@ com/okestro/community/CommunityApplication.class
 com/okestro/community/model/ListDto.class
 com/okestro/community/service/BoardService.class
 com/okestro/community/model/UserEntity.class
-com/okestro/community/model/UserEntity$UserEntityBuilder.class
 com/okestro/community/service/impl/UserServiceImpl.class
 com/okestro/community/service/UserService.class

@@ -19,14 +19,13 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/api/user/{user_id)")
-    public ResponseEntity<String> registerUser(@RequestBody UserEntity request) {
-        String user_id = request.getUserId();
-        String user_pw = request.getUserPw();
+    @PostMapping("/{user_id}")
+    public ResponseEntity<String> registerUser(@RequestBody UserEntity request, @PathVariable("user_id") String userId) {
+        String userPw = request.getUserPw();
 
-        if (!userService.isUsernameUnique(user_id)) {
-            userService.registerUser(user_id, user_pw);
-            return new ResponseEntity<>("회원가입에 성공하였습니다." + user_id + "님 환영합니다.", HttpStatus.CREATED);
+        if (!userService.isUsernameUnique(userId)) {
+            userService.registerUser(userId, userPw);
+            return new ResponseEntity<>("회원가입에 성공하였습니다." + userId + "님 환영합니다.", HttpStatus.CREATED);
         } else {
             return new ResponseEntity<>("이미 존재하는 아이디입니다.", HttpStatus.BAD_REQUEST);
         }

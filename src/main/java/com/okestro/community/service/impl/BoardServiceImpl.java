@@ -1,15 +1,11 @@
 package com.okestro.community.service.impl;
 
-//import com.okestro.community.entity.BoardEntity;
-//import com.okestro.community.model.BoardDto;
 import com.okestro.community.model.ListDto;
 import com.okestro.community.service.BoardService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Service
 
@@ -158,7 +154,6 @@ public class BoardServiceImpl implements BoardService {
         listDto20.setContent("최근의 테크 트렌드와 관련된 이야기를 나눠봐요. 여러분들은 어떤 기술 동향에 관심이 있나요?");
         this.listDtoMember.add(listDto20);
     }
-
 
     @Override
     public List<ListDto> boardlist() {

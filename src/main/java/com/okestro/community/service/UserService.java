@@ -1,7 +1,7 @@
 package com.okestro.community.service;
 
 public interface UserService {
-    boolean isUsernameUnique(String user_id);
+    boolean isUsernameUnique(String userId);
 
-    void registerUser(String user_id, String user_pw);
+    void registerUser(String userId, String userPw);
 }
