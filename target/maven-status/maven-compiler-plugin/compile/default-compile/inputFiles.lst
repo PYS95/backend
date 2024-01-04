@@ -1,0 +1,10 @@
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/CommunityApplication.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/repo/UserRepository.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/controller/BoardController.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/service/impl/UserServiceImpl.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/controller/UserController.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/service/impl/BoardServiceImpl.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/service/BoardService.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/model/ListDto.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/model/UserEntity.java
+/Users/jeongjuhee/IdeaProjects/backend/src/main/java/com/okestro/community/service/UserService.java
