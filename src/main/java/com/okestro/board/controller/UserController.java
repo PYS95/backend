@@ -1,6 +1,6 @@
 package com.okestro.board.controller;
 
-import com.okestro.board.model.UserEntity;
+import com.okestro.board.model.entity.UserEntity;
 import com.okestro.board.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
