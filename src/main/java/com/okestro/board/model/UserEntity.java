@@ -1,4 +1,4 @@
-package com.okestro.community.model;
+package com.okestro.board.model;
 
 import lombok.*;
 

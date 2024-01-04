@@ -1,7 +1,7 @@
-package com.okestro.community.service.impl;
+package com.okestro.board.service.impl;
 
-import com.okestro.community.model.ListDto;
-import com.okestro.community.service.BoardService;
+import com.okestro.board.model.ListDto;
+import com.okestro.board.service.BoardService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

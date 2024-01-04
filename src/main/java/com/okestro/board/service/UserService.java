@@ -1,4 +1,4 @@
-package com.okestro.community.service;
+package com.okestro.board.service;
 
 public interface UserService {
     boolean isUsernameUnique(String userId);
