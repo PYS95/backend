@@ -1,6 +1,6 @@
-package com.okestro.community.repo;
+package com.okestro.board.repo;
 
-import com.okestro.community.model.UserEntity;
+import com.okestro.board.model.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

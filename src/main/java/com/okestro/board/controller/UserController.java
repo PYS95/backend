@@ -1,7 +1,7 @@
-package com.okestro.community.controller;
+package com.okestro.board.controller;
 
-import com.okestro.community.model.UserEntity;
-import com.okestro.community.service.UserService;
+import com.okestro.board.model.UserEntity;
+import com.okestro.board.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

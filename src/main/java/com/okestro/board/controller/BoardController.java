@@ -1,12 +1,11 @@
-package com.okestro.community.controller;
+package com.okestro.board.controller;
 
 //import com.okestro.community.entity.BoardEntity;
 //import com.okestro.community.model.BoardDto;
-import com.okestro.community.model.ListDto;
-import com.okestro.community.service.BoardService;
+import com.okestro.board.model.ListDto;
+import com.okestro.board.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
