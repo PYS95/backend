@@ -1,3 +1,3 @@
-/Users/jeongjuhee/IdeaProjects/backend/src/test/java/com/okestro/community/database/ConnectionTest.java
-/Users/jeongjuhee/IdeaProjects/backend/src/test/java/com/okestro/community/model/UserEntityTest.java
-/Users/jeongjuhee/IdeaProjects/backend/src/test/java/com/okestro/community/CommunityApplicationTests.java
+/Users/pys/Projcet/project/backend/src/test/java/com/okestro/board/model/UserEntityTest.java
+/Users/pys/Projcet/project/backend/src/test/java/com/okestro/board/BoardApplicationTests.java
+/Users/pys/Projcet/project/backend/src/test/java/com/okestro/board/database/ConnectionTest.java
