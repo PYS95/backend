@@ -1,13 +1,11 @@
-package com.okestro.community;
+package com.okestro.board;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CommunityApplication {
-
+public class BoardApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CommunityApplication.class, args);
+        SpringApplication.run(BoardApplication.class, args);
     }
-
 }
