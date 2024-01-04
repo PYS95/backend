@@ -1,8 +1,8 @@
-package com.okestro.community.service.impl;
+package com.okestro.board.service.impl;
 
-import com.okestro.community.model.UserEntity;
-import com.okestro.community.repo.UserRepository;
-import com.okestro.community.service.UserService;
+import com.okestro.board.model.UserEntity;
+import com.okestro.board.repo.UserRepository;
+import com.okestro.board.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

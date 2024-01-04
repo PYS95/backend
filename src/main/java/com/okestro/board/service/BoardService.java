@@ -1,6 +1,6 @@
-package com.okestro.community.service;
+package com.okestro.board.service;
 
-import com.okestro.community.model.ListDto;
+import com.okestro.board.model.ListDto;
 
 import java.util.List;
 

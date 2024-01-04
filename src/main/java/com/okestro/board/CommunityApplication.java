@@ -1,4 +1,4 @@
-package com.okestro.community;
+package com.okestro.board;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

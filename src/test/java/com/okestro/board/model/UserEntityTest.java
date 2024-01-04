@@ -1,8 +1,6 @@
-package com.okestro.community.model;
+package com.okestro.board.model;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserEntityTest {
 

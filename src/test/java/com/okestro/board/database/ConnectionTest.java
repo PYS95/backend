@@ -1,4 +1,4 @@
-package com.okestro.community.database;
+package com.okestro.board.database;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
