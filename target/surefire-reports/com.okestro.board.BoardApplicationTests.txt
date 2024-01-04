@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.okestro.board.BoardApplicationTests
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.473 s - in com.okestro.board.BoardApplicationTests
+=======
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.701 s - in com.okestro.board.BoardApplicationTests
+>>>>>>> 8609bfdef9c8eb61843da6fd3c3713cf46883976

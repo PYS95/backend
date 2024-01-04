@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.okestro.board.model.UserEntityTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in com.okestro.board.model.UserEntityTest
+=======
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in com.okestro.board.model.UserEntityTest
+>>>>>>> 8609bfdef9c8eb61843da6fd3c3713cf46883976
