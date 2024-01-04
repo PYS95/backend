@@ -1,0 +1,3 @@
+com/okestro/community/CommunityApplicationTests.class
+com/okestro/community/database/ConnectionTest.class
+com/okestro/community/model/UserEntityTest.class
