@@ -6,6 +6,7 @@ import com.okestro.board.model.entity.PostEntity;
 import java.util.List;
 
 public interface PostService {
+
     List<PostDto> getPostList();
     PostDto getPost(Long post_no);
     PostEntity createPost(PostDto postDto);

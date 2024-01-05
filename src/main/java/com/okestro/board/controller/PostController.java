@@ -19,31 +19,31 @@ public class PostController {
     private final PostService postService;
 
     // 목록 페이지
-    @GetMapping("/board")
+    @GetMapping("/post/list")
     public List<PostDto> getPostList() {
         return postService.getPostList();
     }
 
     // 상세 페이지
-    @GetMapping("/board/{post_no}")
+    @GetMapping("/post/{post_no}")
     public PostDto getPost(@PathVariable("post_no") Long post_no) {
         return postService.getPost(post_no);
     }
 
     // 게시글 생성
-    @PostMapping("/board")
+    @PostMapping("/post")
     public PostEntity createPost(@RequestBody PostDto postDto) {
         return postService.createPost(postDto);
     }
 
     // 게시글 수정
-    @PatchMapping("/board/{post_no}")
+    @PatchMapping("/post/{post_no}")
     public PostEntity updatePost(@PathVariable("post_no") Long post_no, @RequestBody PostDto postDto) {
         return postService.updatePost(post_no, postDto);
     }
 
     // 게시글 삭제
-    @DeleteMapping("/board/{post_no}")
+    @DeleteMapping("/post/{post_no}")
     public void deletePost(@PathVariable("post_no") Long post_no) {
         postService.deletePost(post_no);
     }
