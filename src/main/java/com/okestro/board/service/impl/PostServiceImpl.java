@@ -63,6 +63,7 @@ public class PostServiceImpl implements PostService {
                 .post_title(postDto.getPost_title())
                 .post_content(postDto.getPost_content())
                 .post_pw(postDto.getPost_pw())
+                .user_id(postDto.getUser_id())  // 사용자 ID 저장 추가
                 .build();
         return postRepository.save(postEntity);
     }

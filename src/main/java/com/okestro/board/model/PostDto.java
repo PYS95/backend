@@ -17,5 +17,5 @@ public class PostDto implements Serializable {
     private String user_id;
     private String post_content;
     private int post_comment_cnt;
-    private int post_pw;
+    private String post_pw;
 }

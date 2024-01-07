@@ -33,5 +33,5 @@ public class PostEntity {
     private int post_comment_cnt;
 
     @Column(name = "post_pw")
-    private int post_pw;
+    private String post_pw;
 }
