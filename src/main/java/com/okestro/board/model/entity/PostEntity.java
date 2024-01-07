@@ -16,10 +16,22 @@ import javax.persistence.*;
 public class PostEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column(name = "post_no")
     private Long post_no;
+
+    @Column(name = "post_title")
     private String post_title;
+
+    @Column(name = "user_id")
     private String user_id;
+
+    @Column(name = "post_content")
     private String post_content;
+
+    @Column(name = "post_comment_cnt")
     private int post_comment_cnt;
+
+    @Column(name = "post_pw")
     private int post_pw;
 }
