@@ -54,6 +54,7 @@ public class UserController {
 
     @PutMapping("/{user_id}")
     public ResponseEntity<String> updatePassword(@PathVariable String user_id, @RequestBody String user_pw) {
+
         if (userService.updateUserPassword(user_id, user_pw)) {
             return new ResponseEntity<>("패스워드가 성공적으로 변경되었습니다.", HttpStatus.OK);
         } else {
@@ -69,4 +70,5 @@ public class UserController {
             return new ResponseEntity<>("회원탈퇴에 실패했습니다.", HttpStatus.BAD_REQUEST);
         }
     }
+
 }

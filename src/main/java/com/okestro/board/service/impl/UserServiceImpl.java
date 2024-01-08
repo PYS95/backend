@@ -6,7 +6,6 @@ import com.okestro.board.model.repo.UserRepository;
 import com.okestro.board.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import java.util.Optional;
 
@@ -60,6 +59,14 @@ public class UserServiceImpl implements UserService {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean checkPassword(String user_id, String current_user_pw) {
+        Optional<UserEntity> optionalUserEntity = userRepository.findByUserId(user_id);
+        return optionalUserEntity
+                .map(userEntity -> userEntity.getUserPw().equals(current_user_pw))
+                .orElse(false);
     }
 
     private UserDto convertToUserDto(UserEntity userEntity) {
