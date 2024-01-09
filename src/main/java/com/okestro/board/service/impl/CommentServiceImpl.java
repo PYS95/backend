@@ -73,6 +73,24 @@ public class CommentServiceImpl implements CommentService {
         return false;
     }
 
+    @Override
+    public void updateCommentCount(Long postId) {
+        // 댓글 수 업데이트 로직을 작성
+        // 예시로 댓글 수를 가져와서 업데이트하는 방식으로 구현
+        List<CommentEntity> comments = commentRepository.findByPost_PostNo(postId);
+        int commentCount = comments.size();
+
+        Optional<PostEntity> postEntityOptional = postRepository.findById(postId);
+        if (postEntityOptional.isPresent()) {
+            PostEntity postEntity = postEntityOptional.get();
+            postEntity.setPost_comment_cnt(commentCount);
+            postRepository.save(postEntity);
+        } else {
+            System.out.println("post_no에 대한 게시물을 찾을 수 없습니다: " + postId);
+            // 연관된 게시물을 찾을 수 없는 경우 처리, 예를 들어 오류 응답을 반환하거나 예외를 throw할 수 있습니다.
+        }
+    }
+
     // Entity를 DTO로 변환하는 메서드
     private CommentDto convertToDto(CommentEntity commentEntity) {
         CommentDto commentDto = new CommentDto();

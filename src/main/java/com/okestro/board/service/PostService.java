@@ -12,5 +12,4 @@ public interface PostService {
     PostEntity createPost(PostDto postDto);
     PostEntity updatePost(Long post_no, PostDto postDto);
     void deletePost(Long post_no);
-
 }

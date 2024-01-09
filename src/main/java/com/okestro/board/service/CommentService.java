@@ -11,4 +11,6 @@ public interface CommentService {
         void registerComment(CommentDto commentDto);
 
         boolean deleteComment(Long commentId);
+
+        void updateCommentCount(Long postId);
 }

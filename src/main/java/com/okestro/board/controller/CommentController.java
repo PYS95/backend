@@ -27,13 +27,15 @@ public class CommentController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-
     }
-
     @PostMapping("/add")
     public ResponseEntity<String> registerComment(@RequestBody CommentDto commentDto) {
 
         commentService.registerComment(commentDto);
+
+        Long postId = commentDto.getPost_no();
+        updateCommentCount(postId);
+
         return new ResponseEntity<>("댓글이 성공적으로 등록되었습니다.", HttpStatus.OK);
     }
 
@@ -44,6 +46,11 @@ public class CommentController {
         } else {
             return new ResponseEntity<>("댓글 삭제에 실패했습니다.", HttpStatus.BAD_REQUEST);
         }
+    }
+
+    private void updateCommentCount(Long postId) {
+
+        commentService.updateCommentCount(postId);
     }
 
 }
