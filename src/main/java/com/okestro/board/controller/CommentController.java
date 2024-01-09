@@ -6,6 +6,8 @@ import com.okestro.board.service.CommentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+@RestController
+@RequestMapping("/api/comment")
 public class CommentController {
 
     private final CommentService commentService;
@@ -24,7 +26,7 @@ public class CommentController {
         }
     }
 
-    @PostMapping("/{comment_id}")
+    @PostMapping("/add")
     public ResponseEntity<String> registerComment(@RequestBody CommentDto commentDto) {
         commentService.registerComment(commentDto);
         return new ResponseEntity<>("댓글이 성공적으로 등록되었습니다.", HttpStatus.OK);

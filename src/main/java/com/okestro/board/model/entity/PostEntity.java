@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,7 +17,6 @@ import javax.persistence.*;
 public class PostEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Column(name = "post_no")
     private Long post_no;
 
@@ -34,4 +34,7 @@ public class PostEntity {
 
     @Column(name = "post_pw")
     private String post_pw;
+
+    @OneToMany(mappedBy = "post", cascade = CascadeType.ALL)
+    private List<CommentEntity> comments;
 }

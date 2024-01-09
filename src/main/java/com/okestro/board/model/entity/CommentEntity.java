@@ -18,8 +18,9 @@ public class CommentEntity {
     @Column(name = "comment_no")
     private Long comment_no;
 
-    @Column(name = "post_no")
-    private Long post_no;
+    @ManyToOne
+    @JoinColumn(name = "post_no")
+    private PostEntity post;
 
     @Column(name = "user_id")
     private String user_id;
