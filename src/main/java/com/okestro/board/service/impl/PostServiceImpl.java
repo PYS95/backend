@@ -6,7 +6,6 @@ import com.okestro.board.model.entity.PostEntity;
 import com.okestro.board.model.repo.PostRepository;
 import com.okestro.board.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ public class PostServiceImpl implements PostService {
     private final PostRepository postRepository;
 
     @Autowired
-    public PostServiceImpl(@Qualifier("postRepository") PostRepository postRepository) {
+    public PostServiceImpl(PostRepository postRepository){
         this.postRepository = postRepository;
     }
 
