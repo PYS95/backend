@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CommentServiceImpl implements CommentService {
@@ -26,19 +28,11 @@ public class CommentServiceImpl implements CommentService {
 
     // 댓글 불러오기
     @Override
-    public CommentDto getComment(Long commentId) {
-        Optional<CommentEntity> optionalCommentEntity = commentRepository.findById(commentId);
-        if (optionalCommentEntity.isPresent()) {
-            CommentEntity commentEntity = optionalCommentEntity.get();
-            CommentDto commentDto = new CommentDto();
-            commentDto.setComment_no(commentEntity.getComment_no());
-            // 수정된 부분: commentEntity.getPost().getPost_no()로 변경
-            commentDto.setPost_no(commentEntity.getPost().getPost_no());
-            commentDto.setUser_id(commentEntity.getUser_id());
-            commentDto.setComment_content(commentEntity.getComment_content());
-            return commentDto;
-        }
-        return null;
+    public List<CommentDto> getCommentsByPost(Long postId) {
+        List<CommentEntity> commentEntities = commentRepository.findByPost_PostNo(postId);
+        return commentEntities.stream()
+                .map(this::convertToDto)
+                .collect(Collectors.toList());
     }
 
     // 댓글 등록
@@ -58,7 +52,6 @@ public class CommentServiceImpl implements CommentService {
             PostEntity postEntity = postEntityOptional.get();
 
             CommentEntity commentEntity = new CommentEntity();
-            // 수정된 부분: commentEntity.setPost(postEntity)로 변경
             commentEntity.setPost(postEntity);
             commentEntity.setUser_id(commentDto.getUser_id());
             commentEntity.setComment_content(commentDto.getComment_content());
@@ -78,5 +71,15 @@ public class CommentServiceImpl implements CommentService {
             return true;
         }
         return false;
+    }
+
+    // Entity를 DTO로 변환하는 메서드
+    private CommentDto convertToDto(CommentEntity commentEntity) {
+        CommentDto commentDto = new CommentDto();
+        commentDto.setComment_no(commentEntity.getComment_no());
+        commentDto.setPost_no(commentEntity.getPost().getPost_no());
+        commentDto.setUser_id(commentEntity.getUser_id());
+        commentDto.setComment_content(commentEntity.getComment_content());
+        return commentDto;
     }
 }

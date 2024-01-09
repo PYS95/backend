@@ -6,6 +6,8 @@ import com.okestro.board.service.CommentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/comment")
 public class CommentController {
@@ -16,18 +18,33 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-    @GetMapping("/{comment_id}")
-    public ResponseEntity<CommentDto> getComment(@PathVariable Long comment_id) {
-        CommentDto commentDto = commentService.getComment(comment_id);
-        if (commentDto != null) {
-            return new ResponseEntity<>(commentDto, HttpStatus.OK);
+//    @GetMapping(name = "/{post_no}")
+//    public ResponseEntity<List<CommentDto>> getCommentsByPost(@PathVariable(value = "post_no") Long post_no) {
+//        List<CommentDto> comments = commentService.getCommentsByPost(post_no);
+//        if (comments != null && !comments.isEmpty()) {
+//            return new ResponseEntity<>(comments, HttpStatus.OK);
+//        } else {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//    }
+
+
+    @GetMapping("/list/{postId}")
+    public ResponseEntity<List<CommentDto>> test(@PathVariable Long postId) {
+
+        List<CommentDto> comments = commentService.getCommentsByPost(postId);
+        if (comments != null && !comments.isEmpty()) {
+            return new ResponseEntity<>(comments, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+
     }
+
 
     @PostMapping("/add")
     public ResponseEntity<String> registerComment(@RequestBody CommentDto commentDto) {
+
         commentService.registerComment(commentDto);
         return new ResponseEntity<>("댓글이 성공적으로 등록되었습니다.", HttpStatus.OK);
     }
