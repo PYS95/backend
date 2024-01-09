@@ -18,19 +18,8 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-//    @GetMapping(name = "/{post_no}")
-//    public ResponseEntity<List<CommentDto>> getCommentsByPost(@PathVariable(value = "post_no") Long post_no) {
-//        List<CommentDto> comments = commentService.getCommentsByPost(post_no);
-//        if (comments != null && !comments.isEmpty()) {
-//            return new ResponseEntity<>(comments, HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
-
-
     @GetMapping("/list/{postId}")
-    public ResponseEntity<List<CommentDto>> test(@PathVariable Long postId) {
+    public ResponseEntity<List<CommentDto>> getCommend(@PathVariable Long postId) {
 
         List<CommentDto> comments = commentService.getCommentsByPost(postId);
         if (comments != null && !comments.isEmpty()) {
@@ -40,7 +29,6 @@ public class CommentController {
         }
 
     }
-
 
     @PostMapping("/add")
     public ResponseEntity<String> registerComment(@RequestBody CommentDto commentDto) {
@@ -57,4 +45,5 @@ public class CommentController {
             return new ResponseEntity<>("댓글 삭제에 실패했습니다.", HttpStatus.BAD_REQUEST);
         }
     }
+
 }
