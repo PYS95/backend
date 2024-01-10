@@ -28,6 +28,7 @@ public class CommentController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
     @PostMapping("/add")
     public ResponseEntity<String> registerComment(@RequestBody CommentDto commentDto) {
 

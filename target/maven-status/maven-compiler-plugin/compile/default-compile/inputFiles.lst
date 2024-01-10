@@ -5,10 +5,15 @@
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/entity/PostEntity.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/PostDto.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/repo/PostRepository.java
+/Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/CommentDto.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/service/impl/UserServiceImpl.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/entity/CommentEntity.java
+/Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/controller/CommentController.java
+/Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/repo/CommentRepository.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/BoardApplication.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/repo/UserRepository.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/entity/UserEntity.java
+/Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/service/impl/CommentServiceImpl.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/service/PostService.java
 /Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/model/UserDto.java
+/Users/pys/Projcet/project/backend/src/main/java/com/okestro/board/service/CommentService.java

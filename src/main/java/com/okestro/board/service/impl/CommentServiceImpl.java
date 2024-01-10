@@ -91,7 +91,6 @@ public class CommentServiceImpl implements CommentService {
         }
     }
 
-    // Entity를 DTO로 변환하는 메서드
     private CommentDto convertToDto(CommentEntity commentEntity) {
         CommentDto commentDto = new CommentDto();
         commentDto.setComment_no(commentEntity.getComment_no());
